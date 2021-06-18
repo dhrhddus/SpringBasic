@@ -5,27 +5,28 @@ import org.junit.runner.RunWith;
 import org.mybatis.spring.SqlSessionFactoryBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
-import org.springframework.test.context.junit4.SspringJUnit4ClassRunner;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import com.simple.test.mapper.TESTMapper;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration("file:src/main/webapp/WEB-INF/config/root-context.xml.class")
-
+@ContextConfiguration("file:src/main/webapp/WEB-INF/config/root-context.xml")
 public class MybatisTEST {
-
-	//1. ¼¼¼ÇÆÑÅä¸® ºó ÁÖÀÔ È®ÀÎ
+	
+	//1. ì„¸ì…˜íŒ©í† ë¦¬ ë¹ˆ ì£¼ì… í™•ì¸
 	@Autowired
 	SqlSessionFactoryBean sqlSessionFactory;
 	
-	//2.¸ÊÆÛÆÄÀÏ ÁÖÀÔ
+	//2. ë§¤í¼íŒŒì¼ ì£¼ì…
 	@Autowired
 	TESTMapper testMapper;
 	
 	
 	@Test
 	public void MybatisTest() {
-		System.out.println("¸¶ÀÌ¹ÙÆ¼½ºÆÑÅä¸®¹ø:" + sqlSessionFactory);
+		System.out.println("ë§ˆì´ë°”í‹°ìŠ¤íŒ©í† ë¦¬ë¹ˆ:" + sqlSessionFactory);
+		
+		System.out.println(testMapper.getTEST() );
+		
 	}
-	
 }
