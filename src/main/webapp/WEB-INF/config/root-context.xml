@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<!-- Root Context: defines shared resources visible to all other web components -->
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	<!-- 데이터베이스 접속 정보 -->
+	<bean id="dataSource" class="com.zoxxer.hikari.HikariDataSource">
+		<property name="driverClcassName" value="${ds.driverClassName}"></property>
+		<property name="jdbcUrl" value="${ds.jdbcUrl}"/>
+		<property name="username" value="${ds.username"/>
+		<property name=""></property>
+	</bean>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<!-- 마이바티스의 인터페이스를 읽어서 사용할 수 있도록 처리 -->
+	<mybatis-spring:scan base-package="com.simple.test.mapper"></mybatis-spring:scan>
+</beans>
